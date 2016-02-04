@@ -15,7 +15,7 @@ RUN DEBIAN_FRONTEND=noninteractive /etc/init.d/postgresql start \
 EXPOSE 5432
 USER root
 RUN DEBIAN_FRONTEND=noninteractive apt-get clean \
-	&& apt-get autoremove -y \
+	&& apt-get autoremove \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /srv/www
