@@ -24,4 +24,4 @@ WORKDIR /srv/www
 
 ADD postgresql.sv.conf /etc/supervisor/conf.d/postgresql.sv.conf
 
-CMD supervisord -c /etc/supervisor.conf
+CMD ["supervisord", "-c", "/etc/supervisor/supervisor.conf"]
